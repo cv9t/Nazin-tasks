@@ -2,13 +2,20 @@
 
 
 .container {
-  max-width: 1920px;
-  padding: 0 410px;
+  max-width: 1100px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 
 .flex-item {
   display: flex;
+}
+
+
+
+/* --------ASIDE and MAIN-------- */
+.main-aside-wrapper {
+  justify-content: space-between;
 }
 
 
@@ -32,19 +39,17 @@
 
 .aside__menu-item {
   align-items: center;
-  justify-content: space-between;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
 }
 
 .aside__socials-caption {
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin-top: 10px;
   padding-bottom: 5px;
   border-bottom: 1px dashed #E5E5E5;
 }
 
-.aside__socials-text {
-  margin-bottom: 10px;
+.aside__socials-text, .aside__link_socials-block  {
+  margin-top: 15px;
 }
 
 .aside__socials-logo {
@@ -62,4 +67,48 @@
   padding: 10px;
   border: 1px solid #E5E5E5;
   border-radius: 5px;
+}
+
+
+
+/* --------MAIN-------- */
+.main {
+  margin-left: 35px;
+}
+
+.main__baner {
+  height: 445px;
+  width: 896px;
+  background: url("../images/main/baner.jpg") center / contain no-repeat;
+  align-items: flex-end;
+}
+
+.main__banner-captions {
+  position: relative;
+  bottom: 15%;
+}
+
+.main__banner-block {
+  padding: 10px 15px;
+}
+
+.main__banner-block_top {
+  display: inline-block;
+  background-color: white;
+}
+
+.main__banner-block_bottom {
+  color: white;
+  background-color: black;
+}
+
+.main__tabs-item {
+  background: #EFF8F7;
+  padding: 20px;
+  flex-direction: column;
+  flex:1 1 auto;
+}
+
+.main__tabs-item_active {
+  background: #D9EFEC;
 }
