@@ -12,7 +12,7 @@
             <section class="main-aside-wrapper flex-item">
                 <nav class="aside">
                     <div class="aside__inner flex-item">
-                        <a class="aside__icon-logo" href="#">
+                        <a class="aside__icon-link" href="#">
                             <svg class="aside__logo">
                                 <use xlink:href="assets/svg/foodSense.svg#foodSense"></use>
                             </svg>
@@ -26,21 +26,27 @@
                             </div>
                             <div class="aside__menu-item flex-item">
                                 <svg class ="aside__menu-logo">
-                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-forks"></use>
+                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-book"></use>
                                 </svg>
-                                <a class="aside__link" href="#">Tastemakers</a>
+                                <a class="aside__link" href="#">Blog</a>
                             </div>
                             <div class="aside__menu-item flex-item">
                                 <svg class ="aside__menu-logo">
-                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-forks"></use>
+                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-list"></use>
                                 </svg>
-                                <a class="aside__link" href=#>Tastemakers</a>
+                                <a class="aside__link" href=#>The A-List</a>
                             </div>
                             <div class="aside__menu-item flex-item">
                                 <svg class ="aside__menu-logo">
-                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-forks"></use>
+                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-camera"></use>
                                 </svg>
-                                <a class="aside__link" href="#">Tastemakers</a>
+                                <a class="aside__link" href="#">Contribute</a>
+                            </div>
+                            <div class="aside__menu-item flex-item">
+                                <svg class ="aside__menu-logo">
+                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-about"></use>
+                                </svg>
+                                <a class="aside__link" href="#">About</a>
                             </div>
                         </nav>
                         <div class="aside__socials">
@@ -78,40 +84,40 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="main__tabs-menu flex-item">
+                        <div class="main__tabs flex-item">
                             <button class="main__tabs-item flex-item">
                                 <div class="main__tabs-item-caption">Tastemakers</div>
                                 <div class="main__tabs-item-description">Feast your eyes & get reciepes!</div>
                             </button>
                             <button class="main__tabs-item flex-item">
-                                <div class="main__tabs-item-caption">Tastemakers</div>
-                                <div class="main__tabs-item-description">Feast your eyes & get reciepes!</div>
+                                <div class="main__tabs-item-caption">Blog</div>
+                                <div class="main__tabs-item-description">News, how-tos, stories, and more</div>
                             </button>
                             <button class="main__tabs-item flex-item">
-                                <div class="main__tabs-item-caption">Tastemakers</div>
-                                <div class="main__tabs-item-description">Feast your eyes & get reciepes!</div>
+                                <div class="main__tabs-item-caption">The A-List</div>
+                                <div class="main__tabs-item-description">Handpicked, absolute favorites</div>
                             </button>
                             <button class="main__tabs-item main__tabs-item_active flex-item">
-                                <div class="main__tabs-item-caption">Tastemakers</div>
-                                <div class="main__tabs-item-description">Feast your eyes & get reciepes!</div>
+                                <div class="main__tabs-item-caption">Contribute</div>
+                                <div class="main__tabs-item-description">We want to hear from you!</div>
                             </button>
                         </div>
                         <div class="main__subcribe-box flex-item">
                             <div class="main__subscribe-item flex-item">
-                                <svg class="main_mail-logo">
+                                <svg class="main__mail-logo">
                                     <use xlink:href="assets/svg/mail.svg#mail"></use>
                                 </svg>
                                 <span>Sign up for out newsletter to receive a handpicked selection of the best stories, recipes, and news, delivered weekly to your inbox.</span>
                             </div>
                             <div class="main__subscribe-item flex-item">
-                                <input autocomplete="off" id = "email" name = "email" type="email" placeholder="Email" required>
+                                <input autocomplete="off" id = "email" name = "email" type="email" placeholder="Email" size="20" required>
                                 <button type="submit">Subscribe</button>  
                             </div>
                         </div>
                         <div class="information-block flex-item">
                             <div class="information-block__item flex-item">
                                 <div class="information-block__image-wrapper">
-                                    <img src="assets/images/apples.jpg" alt="">
+                                    <img src="assets/images/apples.jpg" alt="apples">
                                 </div>
                                 <div class="information-block__header">2012’s Best Summer Cookbooks</div>
                                 <div class="information-block__body">With the best of the season coming from “orchards, farms and gardens,” NPR has put together an impressive collection of 10 summer cookbooks.</div>
@@ -122,10 +128,21 @@
                             </div>
                             <div class="information-block__item flex-item">
                                 <div class="information-block__image-wrapper">
-                                    <img src="assets/images/apples.jpg" alt="">
+                                    <img src="assets/images/vegetables.jpg" alt="vegetables">
                                 </div>
-                                <div class="information-block__header">2012’s Best Summer Cookbooks</div>
-                                <div class="information-block__body">With the best of the season coming from “orchards, farms and gardens,” NPR has put together an impressive collection of 10 summer cookbooks.</div>
+                                <div class="information-block__header">How to Make Vegetable Chips</div>
+                                <div class="information-block__body">About a month ago, I ate almost an entire box of kale chips. My brother and I were visiting our cousin in Brooklyn, and before a very thoughtfully prepared vagan...</div>
+                                <div class="information-block__footer flex-item">
+                                    <span class="information-block__date">May 17, 2012 /</span>
+                                    <a href="#">Read...</a>
+                                </div>
+                            </div>
+                            <div class="information-block__item flex-item">
+                                <div class="information-block__image-wrapper">
+                                    <img src="assets/images/salat.jpg" alt="salat">
+                                </div>
+                                <div class="information-block__header">Join us on Pinterest!</div>
+                                <div class="information-block__body">If I could curate a cookbook for you, this would be it.</div>
                                 <div class="information-block__footer flex-item">
                                     <span class="information-block__date">May 23, 2012 /</span>
                                     <a href="#">Read...</a>
@@ -133,23 +150,12 @@
                             </div>
                             <div class="information-block__item flex-item">
                                 <div class="information-block__image-wrapper">
-                                    <img src="assets/images/apples.jpg" alt="">
+                                    <img src="assets/images/plant.jpg" alt="plant">
                                 </div>
-                                <div class="information-block__header">2012’s Best Summer Cookbooks</div>
-                                <div class="information-block__body">With the best of the season coming from “orchards, farms and gardens,” NPR has put together an impressive collection of 10 summer cookbooks.</div>
+                                <div class="information-block__header">Recipes from a Sunday Supper</div>
+                                <div class="information-block__body">I could not figure out what to do with the delectable slices of Pear Cake that I brought home from this wonderful Sunday supper - eat them slowly, a little bit at...</div>
                                 <div class="information-block__footer flex-item">
-                                    <span class="information-block__date">May 23, 2012 /</span>
-                                    <a href="#">Read...</a>
-                                </div>
-                            </div>
-                            <div class="information-block__item flex-item">
-                                <div class="information-block__image-wrapper">
-                                    <img src="assets/images/apples.jpg" alt="">
-                                </div>
-                                <div class="information-block__header">2012’s Best Summer Cookbooks</div>
-                                <div class="information-block__body">With the best of the season coming from “orchards, farms and gardens,” NPR has put together an impressive collection of 10 summer cookbooks.</div>
-                                <div class="information-block__footer flex-item">
-                                    <span class="information-block__date">May 23, 2012 /</span>
+                                    <span class="information-block__date">May 17, 2012 /</span>
                                     <a href="#">Read...</a>
                                 </div>
                             </div>
@@ -159,30 +165,30 @@
             </section>
             <footer class="footer">
                 <div class="footer__inner flex-item">
-                    <div class="footer__item footer__item_left flex-item">
-                        <div class="footer__item_left-top flex-item">
+                    <div class="footer__block footer__block_left flex-item">
+                        <div class="footer__item footer__item_top flex-item">
                             <a href="#">Privacy Policy</a>
                             <div class="vertical-hr"></div>
                             <a href="#">Terms of Use</a>
                             <div class="vertical-hr"></div>
                             <a href="#">Contact</a>
                         </div>
-                        <div class="footer__item_left-bottom">© 2016 Food Sense, all rights reserved.</div>
+                        <div class="footer__item footer__item_bottom">© 2016 Food Sense, all rights reserved.</div>
                     </div>
-                    <div class="footer__item footer__item_right flex-item">
+                    <div class="footer__block footer__block_right flex-item">
                         <a href="#">
-                            <svg class="footer__logo">
+                            <svg class="footer__logo footer__logo_twitter">
                                 <use xlink:href="assets/svg/socialsIcons.svg#twitter-logo-big"></use>
                             </svg>
                         </a>
                         <a href="#">
-                            <svg class="footer__logo">
-                                <use xlink:href="assets/svg/socialsIcons.svg#twitter-logo-big"></use>
+                            <svg class="footer__logo footer__logo_facebook">
+                                <use xlink:href="assets/svg/socialsIcons.svg#facebook-logo"></use>
                             </svg>
                         </a>
                         <a href="#">
-                            <svg class="footer__logo">
-                                <use xlink:href="assets/svg/socialsIcons.svg#twitter-logo-big"></use>
+                            <svg class="footer__logo footer__logo_rss">
+                                <use xlink:href="assets/svg/socialsIcons.svg#rss-logo"></use>
                             </svg>
                         </a>
                     </div>
