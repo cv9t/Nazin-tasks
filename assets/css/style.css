@@ -81,7 +81,7 @@
 /* baner */
 .main__baner {
   height: 445px;
-  background: url("../images/main/baner.jpg") center / cover no-repeat;
+  background: url("../images/baner.jpg") center / cover no-repeat;
   align-items: flex-end;
 }
 
