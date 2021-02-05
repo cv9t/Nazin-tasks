@@ -153,6 +153,10 @@
 }
 
 /* tabs */
+.main__tabs {
+  flex-wrap: wrap;
+}
+
 .main__tabs-item {
   background: #EFF8F7;
   padding: 20px;
