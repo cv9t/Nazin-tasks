@@ -179,7 +179,8 @@
 
 /* subscribe box */
 .main__mail-logo {
-  width: 25%;
+  max-width: 30px;
+  min-width: 30px;
   height: 26px;
 }
 
