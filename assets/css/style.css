@@ -47,6 +47,7 @@
 
 /* --------ASIDE and MAIN-------- */
 .main-aside-wrapper {
+  margin-top: 40px;
   justify-content: space-between;
 }
 
@@ -138,11 +139,11 @@
 
 .main__banner-block {
   padding: 10px 15px;
+  display: inline-block;
 }
 
 .main__banner-block_top {
   font-size: 22px;
-  display: inline-block;
   background-color: white;
 }
 
@@ -159,7 +160,7 @@
   flex:1 1 auto;
 }
 
-.main__tabs-item_active {
+.main__tabs-item:hover {
   background: #D9EFEC;
 }
 
@@ -208,6 +209,10 @@
 }
 
 /* information block */
+.information-block {
+  flex-wrap: wrap;
+}
+
 .information-block__item {
   flex-basis: 23%;
   flex-direction: column;
@@ -231,6 +236,14 @@
 
 .information-block__date {
   color: #E5E5E5;
+}
+
+.information-block__date::after {
+  content: "/";
+}
+
+.information-block__link::after {
+  content: "...";
 }
 
 .information-block__image-wrapper img {
@@ -258,9 +271,10 @@
   flex-direction: column;
 }
 
-.vertical-hr {
-  border-right: 1px solid #E5E5E5;
+.vertical-hr::after{
   margin: 0 5px;
+  content: "|";
+  color: #E5E5E5;
 }
 
 .footer__logo_twitter {
@@ -287,5 +301,5 @@
 }
 
 .footer__item_top {
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
