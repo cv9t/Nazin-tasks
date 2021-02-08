@@ -2,8 +2,8 @@
 
 
 .container {
-    max-width: 1920px;
-    padding: 0 420px;
+    max-width: 1100px;
+    min-width: 1100px;
     margin: 0 auto;
 }
 
@@ -11,42 +11,62 @@
     font-family: Arial, sans-serif;
 }
 
-.flex-item{
+.header-main-wrapper {
     display: flex;
+    justify-content: space-between;
 }
 
-.flex-item_inline {
+
+
+/* ------------HEADER------------ */
+.header {
     display: inline-flex;
 }
 
+.header__logo-container,
 .header__menu-item,
-.header__socials-link-container {
+.header__link_socials,
+.header__link_nav {
+    display: flex;
+}
+
+.header__menu-item,
+.header__link-container {
     color: #34ACA7;
 }
 
-.italic {
-    font-style: italic;
-}
-
-.header__socials-description,
-.header__socials-link-text {
-    font-size: 10px;
-}
-
-
-
-/* ---------HEADER------------ */
-.header {
+.header,
+.header__menu-item {
     flex-direction: column;
 }
 
 .header__logo-container,
-.header__menu-item  {
+.header__link_nav,
+.header__link_socials {
     align-items: center;
+}
+
+.header__link_nav,
+.header__menu-item {
+    flex-direction: row;
+}
+
+.header__socials-description,
+.header__link-socials-title {
+    font-size: 10px;
+}
+
+.header__link,
+.header__socials-description {
+    font-style: italic;
 }
 
 .header__menu-item {
     margin-bottom: 30px;
+}
+
+.header__menu-logo {
+    width: 26px;
 }
 
 .header__socials-title {
@@ -56,12 +76,11 @@
     border-bottom: 1px dashed #E5E5E5;
 }
 
-.header__nav-link {
+.header__menu-title {
     margin-left: 10px;
 }
 
-.header__socials-link {
-    align-items: center;
+.header__link_socials {
     margin-top: 10px;
     border: 1px solid #E5E5E5;
     border-radius: 5px;
@@ -75,6 +94,19 @@
     padding: 10px 0px;
 }
 
-.header__socials-link-text {
+.header__link-socials-title {
     margin-left: 5px;
+}
+
+
+
+/* ------------MAIN------------ */
+.main__banner-demonstration {
+    display: flex;
+}
+
+.main__banner-demonstration {
+    height: 445px;
+    width: 896px;
+    background: url("../assets/images/baner.jpg") center / cover no-repeat;
 }
