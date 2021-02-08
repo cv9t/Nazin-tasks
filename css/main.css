@@ -1,0 +1,80 @@
+@import "resetstyle.css";
+
+
+.container {
+    max-width: 1920px;
+    padding: 0 420px;
+    margin: 0 auto;
+}
+
+.page {
+    font-family: Arial, sans-serif;
+}
+
+.flex-item{
+    display: flex;
+}
+
+.flex-item_inline {
+    display: inline-flex;
+}
+
+.header__menu-item,
+.header__socials-link-container {
+    color: #34ACA7;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.header__socials-description,
+.header__socials-link-text {
+    font-size: 10px;
+}
+
+
+
+/* ---------HEADER------------ */
+.header {
+    flex-direction: column;
+}
+
+.header__logo-container,
+.header__menu-item  {
+    align-items: center;
+}
+
+.header__menu-item {
+    margin-bottom: 30px;
+}
+
+.header__socials-title {
+    text-transform: uppercase;
+    font-family: Verdana, sans-serif;
+    padding: 7px 0;
+    border-bottom: 1px dashed #E5E5E5;
+}
+
+.header__nav-link {
+    margin-left: 10px;
+}
+
+.header__socials-link {
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.header__socials-description {
+    max-width: 135px;
+    word-wrap: break-word;
+    line-height: 18px;
+    padding: 10px 0px;
+}
+
+.header__socials-link-text {
+    margin-left: 5px;
+}

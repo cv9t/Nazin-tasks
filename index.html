@@ -2,199 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>FoodSense</title>
 </head>
 <body>
     <div class="page">
         <div class="container">
-            <section class="main-aside-wrapper flex-item">
-                <nav class="aside">
-                    <div class="aside__inner flex-item">
-                        <a class="aside__icon-link" href="#">
-                            <svg class="aside__logo">
-                                <use xlink:href="assets/svg/foodSense.svg#foodSense"></use>
-                            </svg>
-                        </a>
-                        <nav class="aside__menu">
-                            <div class="aside__menu-item flex-item">
-                                <svg class ="aside__menu-logo">
-                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-forks"></use>
-                                </svg>
-                                <a class="aside__link" href=#>Tastemakers</a>
-                            </div>
-                            <div class="aside__menu-item flex-item">
-                                <svg class ="aside__menu-logo">
-                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-book"></use>
-                                </svg>
-                                <a class="aside__link" href="#">Blog</a>
-                            </div>
-                            <div class="aside__menu-item flex-item">
-                                <svg class ="aside__menu-logo">
-                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-list"></use>
-                                </svg>
-                                <a class="aside__link" href=#>The A-List</a>
-                            </div>
-                            <div class="aside__menu-item flex-item">
-                                <svg class ="aside__menu-logo">
-                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-camera"></use>
-                                </svg>
-                                <a class="aside__link" href="#">Contribute</a>
-                            </div>
-                            <div class="aside__menu-item flex-item">
-                                <svg class ="aside__menu-logo">
-                                    <use xlink:href="assets/svg/foodIcons.svg#foodIcon-about"></use>
-                                </svg>
-                                <a class="aside__link" href="#">About</a>
-                            </div>
-                        </nav>
-                        <div class="aside__socials">
-                            <div class="aside__socials-block flex-item">
-                                <span class="aside__socials-caption">LATEST TWEET</span>
-                                <a class="aside__link aside__link_socials-block flex-item" href="#">
-                                    <svg class="aside__socials-logo">
-                                        <use xlink:href="assets/svg/socialsIcons.svg#twitter-logo-small"></use>
-                                    </svg>
-                                    <span>Join the Conversation</span>
-                                </a>
-                            </div>
-                            <div class="aside__socials-block flex-item">
-                                <span class="aside__socials-caption">LATEST TWEET</span>
-                                <span class="aside__socials-text">For weekly finds, community recommendations, and more, like us on Facebook.</span>
-                                <a class="aside__link aside__link_socials-block flex-item" href="#">
-                                    <svg class="aside__socials-logo">
-                                        <use xlink:href="assets/svg/socialsIcons.svg#twitter-logo-small"></use>
-                                    </svg>
-                                    <span>Join the Conversation</span>
-                                </a>
-                            </div>
-                        </div>
+            <div class="main-header-wrapper">
+                <header class="header flex-item_inline">
+                    <div class="header__logo-container flex-item">
+                        <img class="header__logo" src="assets/svg/foodSense.svg" alt="FoodSense-logo">
                     </div>
-                </nav>
-                <main class="main">
-                    <div class="main__inner">
-                        <div class="main__baner flex-item">
-                            <div class="main__banner-captions">
-                                <div class="main__banner-block main__banner-block_top">
-                                    <span>Share your Foor Sense</span>
-                                </div>
-                                <br>
-                                <div class="main__banner-block main__banner-block_bottom">
-                                    <span>Submit your favorite recipes, become a contributor, or get interviewed</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="main__tabs flex-item">
-                            <button class="main__tabs-item flex-item">
-                                <div class="main__tabs-item-caption">Tastemakers</div>
-                                <div class="main__tabs-item-description">Feast your eyes & get reciepes!</div>
-                            </button>
-                            <button class="main__tabs-item flex-item">
-                                <div class="main__tabs-item-caption">Blog</div>
-                                <div class="main__tabs-item-description">News, how-tos, stories, and more</div>
-                            </button>
-                            <button class="main__tabs-item flex-item">
-                                <div class="main__tabs-item-caption">The A-List</div>
-                                <div class="main__tabs-item-description">Handpicked, absolute favorites</div>
-                            </button>
-                            <button class="main__tabs-item flex-item">
-                                <div class="main__tabs-item-caption">Contribute</div>
-                                <div class="main__tabs-item-description">We want to hear from you!</div>
-                            </button>
-                        </div>
-                        <div class="main__subcribe-box flex-item">
-                            <div class="main__subscribe-item flex-item">
-                                <svg class="main__mail-logo">
-                                    <use xlink:href="assets/svg/mail.svg#mail"></use>
-                                </svg>
-                                <span>Sign up for out newsletter to receive a handpicked selection of the best stories, recipes, and news, delivered weekly to your inbox.</span>
-                            </div>
-                            <form class="main__subscribe-item flex-item" action="">
-                                <input autocomplete="off" id = "email" name = "email" type="email" placeholder="Email" size="20" required>
-                                <button type="submit">Subscribe</button>  
-                            </form>
-                        </div>
-                        <div class="information-block flex-item">
-                            <div class="information-block__item flex-item">
-                                <div class="information-block__image-wrapper">
-                                    <img src="assets/images/apples.jpg" alt="apples">
-                                </div>
-                                <div class="information-block__header">2012’s Best Summer Cookbooks</div>
-                                <div class="information-block__body">With the best of the season coming from “orchards, farms and gardens,” NPR has put together an impressive collection of 10 summer cookbooks.</div>
-                                <div class="information-block__footer flex-item">
-                                    <span class="information-block__date">May 23, 2012 </span>
-                                    <a class="information-block__link" href="#">Read</a>
+                    <div class="header__menu-container">
+                        <ul class="header__menu">
+                            <li class="header__menu-item flex-item">
+                                <img src="assets/svg/header-icon_tastemakers.svg" alt="header-icon_fork">
+                                <a class="header__nav-link italic" href="#">Tastemakers</a>
+                            </li>
+                            <li class="header__menu-item flex-item">
+                                <img src="assets/svg/header-icon_blog.svg" alt="header-icon_fork">
+                                <a class="header__nav-link italic" href="#">Blog</a>
+                            </li>
+                            <li class="header__menu-item flex-item">
+                                <img src="assets/svg/header-icon_list.svg" alt="header-icon_fork">
+                                <a class="header__nav-link italic" href="#">The A-List</a>
+                            </li>
+                            <li class="header__menu-item flex-item">
+                                <img src="assets/svg/header-icon_contribute.svg" alt="header-icon_fork">
+                                <a class="header__nav-link italic" href="#">Contribure</a>
+                            </li>
+                            <li class="header__menu-item flex-item">
+                                <img src="assets/svg/header-icon_about.svg" alt="header-icon_fork">
+                                <a class="header__nav-link italic" href="#">About</a>
+                            </li>
+                        </ul>
+                    </div>                   
+                    <div class="header__socials-container">
+                        <div class="header__socials">
+                            <div class="header__socials-item header__socials-item_chat">
+                                <h1 class="header__socials-title">Latest tweet</h1>
+                                <div class="header__socials-link-container">
+                                    <a class="header__socials-link flex-item" href="#">
+                                        <img class="header__socials-logo" src="assets/svg/twitter-logo_header.svg" alt="twitter-logo">
+                                        <p class="header__socials-link-text italic" >Join the Conversation</p>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="information-block__item flex-item">
-                                <div class="information-block__image-wrapper">
-                                    <img src="assets/images/vegetables.jpg" alt="vegetables">
-                                </div>
-                                <div class="information-block__header">How to Make Vegetable Chips</div>
-                                <div class="information-block__body">About a month ago, I ate almost an entire box of kale chips. My brother and I were visiting our cousin in Brooklyn, and before a very thoughtfully prepared vagan...</div>
-                                <div class="information-block__footer flex-item">
-                                    <span class="information-block__date">May 17, 2012 </span>
-                                    <a class="information-block__link" href="#">Read</a>
-                                </div>
-                            </div>
-                            <div class="information-block__item flex-item">
-                                <div class="information-block__image-wrapper">
-                                    <img src="assets/images/salat.jpg" alt="salat">
-                                </div>
-                                <div class="information-block__header">Join us on Pinterest!</div>
-                                <div class="information-block__body">If I could curate a cookbook for you, this would be it.</div>
-                                <div class="information-block__footer flex-item">
-                                    <span class="information-block__date">May 23, 2012 </span>
-                                    <a class="information-block__link" href="#">Read</a>
-                                </div>
-                            </div>
-                            <div class="information-block__item flex-item">
-                                <div class="information-block__image-wrapper">
-                                    <img src="assets/images/plant.jpg" alt="plant">
-                                </div>
-                                <div class="information-block__header">Recipes from a Sunday Supper</div>
-                                <div class="information-block__body">I could not figure out what to do with the delectable slices of Pear Cake that I brought home from this wonderful Sunday supper - eat them slowly, a little bit at...</div>
-                                <div class="information-block__footer flex-item">
-                                    <span class="information-block__date">May 17, 2012 </span>
-                                    <a class="information-block__link" href="#">Read</a>
+                            <div class="header__socials-item header__socials-item_community">
+                                <h1 class="header__socials-title">Let’s be friends!</h1>
+                                <p class="header__socials-description italic">
+                                    For weekly finds, community recommendations, and more, like us on Facebook.
+                                </p>
+                                <div class="header__socials-link-container">
+                                    <a class="header__socials-link flex-item" href="#">
+                                        <img class="header__socials-logo" src="assets/svg/twitter-logo_header.svg" alt="twitter-logo">
+                                        <p class="header__socials-link-text italic">Join the Community</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </main>
-            </section>
-            <footer class="footer">
-                <div class="footer__inner flex-item">
-                    <div class="footer__block footer__block_left flex-item">
-                        <div class="footer__item footer__item_top flex-item">
-                            <a href="#">Privacy Policy</a>
-                            <span class="vertical-hr"></span>
-                            <a href="#">Terms of Use</a>
-                            <span class="vertical-hr"></span>
-                            <a href="#">Contact</a>
-                        </div>
-                        <div class="footer__item footer__item_bottom">&#169 2016 Food Sense, all rights reserved.</div>
-                    </div>
-                    <div class="footer__block footer__block_right flex-item">
-                        <a href="#">
-                            <svg class="footer__logo footer__logo_twitter">
-                                <use xlink:href="assets/svg/socialsIcons.svg#twitter-logo-big"></use>
-                            </svg>
-                        </a>
-                        <a href="#">
-                            <svg class="footer__logo footer__logo_facebook">
-                                <use xlink:href="assets/svg/socialsIcons.svg#facebook-logo"></use>
-                            </svg>
-                        </a>
-                        <a href="#">
-                            <svg class="footer__logo footer__logo_rss">
-                                <use xlink:href="assets/svg/socialsIcons.svg#rss-logo"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </footer>
+                </header>
+            </div>
         </div>
     </div>
 </body>
