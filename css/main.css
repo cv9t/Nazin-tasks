@@ -143,17 +143,21 @@
     font-size: 18px;
 }
 
-.main__banner-block {
-    align-items: flex-end;
-}
-
 .main__banner-inner {
     position: relative;
     bottom: 20%;
 }
 
-.main__banner-block {
-    height: 445px;
+.main__image-wrapper {
+    position: relative;
+    padding-bottom: 50%;
+}
+
+.main__banner-block {  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
     background: url("../assets/images/baner.jpg") center / cover no-repeat;
 }
 
@@ -168,6 +172,7 @@
     padding: 15px 30px 15px 20px;
     background-color: #000000;
     color: #ffffff;
+    line-height: 18px;
 }
 
 .main__button-container {
@@ -197,9 +202,6 @@
 
 .main__button-info {
     line-height: 18px;
-}
-
-.main__button-info {
     font-size: 10px;
 }
 
@@ -253,6 +255,8 @@
 }
 
 .main__card-image {
+    width: 100%;
+    object-fit: contain;
     filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25));
 }
 
