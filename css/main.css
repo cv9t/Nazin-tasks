@@ -24,6 +24,10 @@
     width: 13%;
 }
 
+.header__link-container {
+    display: inline-flex;
+}
+
 .header__iconcontainer,
 .header__list-item,
 .header__link_social,
@@ -89,8 +93,6 @@
 }
 
 .header__social-info {
-    max-width: 135px;
-    word-wrap: break-word;
     line-height: 18px;
     padding: 10px 0px;
 }
@@ -103,7 +105,7 @@
 
 /* ------------MAIN------------ */
 .main {
-    width: 80%;
+    width: 83%;
 }
 
 .main,
@@ -148,7 +150,7 @@
     bottom: 20%;
 }
 
-.main__image-wrapper {
+.main__banner-image-wrapper {
     position: relative;
     padding-bottom: 50%;
 }
