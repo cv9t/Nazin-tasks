@@ -2,6 +2,7 @@
 
 
 .container {
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -245,15 +246,22 @@
 }
 
 .main__card-container {
-    margin: 0 -1%;
     margin-top: 30px;
     flex-wrap: wrap;
 }
 
 .main__card-item {
-    margin:0 1%;
+    margin: 0 1.33%;
     margin-bottom: 30px;
     width: 23%;
+}
+
+.main__card-container .main__card-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.main__card-container .main__card-item:nth-child(4n + 1) {
+    margin-left: 0;
 }
 
 .main__card-image {
