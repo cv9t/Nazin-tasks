@@ -1,0 +1,47 @@
+{
+  "name": "foodsense-project",
+  "version": "1.0.0",
+  "description": "a HTML/CSS project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cv9t/Nazin-tasks.git"
+  },
+  "author": {
+    "name": "Nazin Sviatoslav",
+    "email": "sviatoslavnazin@gmail.com",
+    "url": "https://vk.com/svyat0x"
+  },
+  "contributes": {
+    "name": "Anton Ilyin"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cv9t/Nazin-tasks/issues"
+  },
+  "keywords": [
+    "email",
+    "HTML",
+    "CSS"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
