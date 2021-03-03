@@ -1,8 +1,9 @@
 const { notify } = require('browser-sync');
 const {src, watch, dest, series, parallel} = require('gulp');
-const fileinclude = require('gulp-file-include');
 
-const   browserSync = require('browser-sync').create(),
+const   gulp = require('gulp'),
+        fileinclude = require('gulp-file-include'),
+        browserSync = require('browser-sync').create(),
         sass = require('gulp-sass'),
         cleanCSS = require('gulp-clean-css'),
         autoprefixer = require('gulp-autoprefixer'),
@@ -10,6 +11,7 @@ const   browserSync = require('browser-sync').create(),
         imagemin = require('gulp-imagemin'),
         htmlmin = require('gulp-htmlmin'),
         del = require('del'),
+        concat = require('gulp-concat'),
         include = require('gulp-file-include');
 
 const   src_folder = "src",
@@ -19,12 +21,13 @@ const   path = {
             dest: {
                     html: dest_folder + '/',
                     style: dest_folder + '/css/',
-                    img: dest_folder + '/assets/img',
-                    icons: dest_folder + '/assets/icons'
+                    img: dest_folder + '/assets/img/',
+                    icons: dest_folder + '/assets/icons/'
             },
             src: {
                     html: src_folder + '/**/*.html',
                     style: src_folder + '/scss/**/*.{scss, less, sass}',
+                    assets: src_folder + '/assets/**/*',
                     img: src_folder + '/assets/img/**/*.{jpg, png, svg, gif, ico, webp}',
                     icons: src_folder + '/assets/icons/**/*.{jpg, png, svg, gif, ico, webp}'
             }
@@ -48,6 +51,7 @@ function liveServer() {
         watch([path.src.style], styles);
         watch([path.src.html], html);
         watch([path.src.html]).on('change', browserSync.reload);
+        watch([path.src.assets]).on('change', browserSync.reload);
 }
 
 function styles() {
@@ -67,7 +71,7 @@ function html() {
                 .pipe(dest(path.dest.html));
 }
 
-function minimg() {
+function assetsMin() {
         return src(path.src.img)
                 .pipe(imagemin([
                         imagemin.gifsicle({interlaced: true}),
@@ -83,23 +87,6 @@ function minimg() {
                 .pipe(dest(path.dest.img));
 }
 
-function minicons() {
-        return src(path.src.icons)
-                .pipe(imagemin([
-                        imagemin.gifsicle({interlaced: true}),
-                        imagemin.mozjpeg({quality: 75, progressive: true}),
-                        imagemin.optipng({optimizationLevel: 5}),
-                        imagemin.svgo({
-                                plugins: [
-                                        {removeViewBox: true},
-                                        {cleanupIDs: false}
-                                ]
-                        })
-                ]))
-                .pipe(dest(path.dest.icons));
-}
 
 
-
-exports.build = series(cleanDist, parallel(liveServer, styles, html, minimg, minicons));
-exports.default = build;
+exports.build = series(cleanDist, parallel(liveServer, styles, html, assetsMin));
