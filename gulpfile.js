@@ -11,7 +11,6 @@ const   gulp = require('gulp'),
         imagemin = require('gulp-imagemin'),
         htmlmin = require('gulp-htmlmin'),
         del = require('del'),
-        concat = require('gulp-concat'),
         include = require('gulp-file-include');
 
 const   src_folder = "src",
@@ -25,11 +24,15 @@ const   path = {
                     icons: dest_folder + '/assets/icons/'
             },
             src: {
+                    html: [src_folder + '/*.html', "!" + src_folder + "/**/_*.html"],
+                    style: src_folder + '/scss/style.+(scss|less|sass)',
+                    img: src_folder + '/assets/img/**/*.+(jpg|png|svg|gif|ico|webp|jpeg)',
+                    icons: src_folder + '/assets/icons/**/*.+(jpg|png|svg|gif|ico|webp|jpeg)'
+            },
+            watch: {
                     html: src_folder + '/**/*.html',
-                    style: src_folder + '/scss/**/*.{scss, less, sass}',
-                    assets: src_folder + '/assets/**/*',
-                    img: src_folder + '/assets/img/**/*.{jpg, png, svg, gif, ico, webp}',
-                    icons: src_folder + '/assets/icons/**/*.{jpg, png, svg, gif, ico, webp}'
+                    style: src_folder + '/scss/**/*.+(scss|less|sass}',
+                    assets: src_folder + '/assets/**/*'
             }
 };
 
@@ -45,13 +48,9 @@ function liveServer() {
                         baseDir: dest_folder
                 },
 
+                port: 3000,
                 notify: false
         });
-
-        watch([path.src.style], styles);
-        watch([path.src.html], html);
-        watch([path.src.html]).on('change', browserSync.reload);
-        watch([path.src.assets]).on('change', browserSync.reload);
 }
 
 function styles() {
@@ -68,10 +67,11 @@ function html() {
         return  src(path.src.html)
                 .pipe(include())
                 .pipe(htmlmin({collapseWhitespace: true}))
-                .pipe(dest(path.dest.html));
+                .pipe(dest(path.dest.html))
+                .pipe(browserSync.stream());
 }
 
-function assetsMin() {
+function imgMin() {
         return src(path.src.img)
                 .pipe(imagemin([
                         imagemin.gifsicle({interlaced: true}),
@@ -87,6 +87,32 @@ function assetsMin() {
                 .pipe(dest(path.dest.img));
 }
 
+function iconsMin() {
+        return src(path.src.icons)
+                .pipe(imagemin([
+                        imagemin.gifsicle({interlaced: true}),
+                        imagemin.mozjpeg({quality: 75, progressive: true}),
+                        imagemin.optipng({optimizationLevel: 5}),
+                        imagemin.svgo({
+                                plugins: [
+                                        {removeViewBox: true},
+                                        {cleanupIDs: false}
+                                ]
+                        })
+                ]))
+                .pipe(dest(path.dest.icons));
+}
+
+function watchFiles() {
+        watch([path.watch.style], styles);
+        watch([path.watch.html], html);
+        watch([path.watch.html]).on('change', browserSync.reload);
+        watch([path.watch.assets]).on('change', browserSync.reload);
+}
 
 
-exports.build = series(cleanDist, parallel(liveServer, styles, html, assetsMin));
+const build = series(cleanDist, parallel(styles, html, imgMin, iconsMin));
+const view = series(build, parallel(liveServer, watchFiles));
+
+exports.build = build;
+exports.default = view;
