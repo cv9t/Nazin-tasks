@@ -1,5 +1,6 @@
 .aside-n-main {
-    
+    padding-top: 30px;
+
     &__inner {
         width: 100%;
 
@@ -25,6 +26,6 @@
     }
 }
 
-// .copyright {
-
-// }
+.copyright {
+    @include font($font-family-arial, $font-weight-normal, 12px, normal, $smokie, 12px);
+}

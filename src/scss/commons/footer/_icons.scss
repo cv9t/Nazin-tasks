@@ -1,0 +1,19 @@
+.footer {
+
+    &__socials{
+        @include flex-pos(flex-start, center);
+    }
+
+    &__icon {
+        width: auto;
+        height: 32px;
+        margin-right: 12px;
+    }
+
+    &__link {
+
+        &:last-child .footer__icon {
+            margin-right: 0;
+        }
+    }
+}

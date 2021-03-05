@@ -1,0 +1,30 @@
+.footer {
+
+    &__info {
+        @include flex-dir(column);
+    }
+
+    &__list {
+        display: flex;
+        margin-bottom: 5px;
+
+        &-item {
+            display: flex;
+
+            &:not(:last-child)::after {
+                content: "";
+                display: block;
+                margin: 0 4px;
+
+                @include border(border-right, 1.5px, solid, $smokie, 0);
+            }
+        }
+    }
+
+    &__link{
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
