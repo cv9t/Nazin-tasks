@@ -1,0 +1,7 @@
+.aside {
+    width: 13%;
+
+    &__inner {
+        @include flex-dir(column);
+    }
+}

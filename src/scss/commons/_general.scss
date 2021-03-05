@@ -1,0 +1,30 @@
+.aside-n-main {
+    
+    &__inner {
+        width: 100%;
+
+        @include flex-pos(space-between, normal);
+    }
+}
+
+.img {
+    @include images;
+}
+
+.text {
+    @include font($font-family-arial, $font-weight-normal, 14px, normal, $dark, 14px)
+}
+
+.link {
+    display: block;
+
+    @include font($font-family-arial, $font-weight-normal, 14px, normal, $primary, 14px);
+
+    &:visited {
+        color: $primary;
+    }
+}
+
+// .copyright {
+
+// }

@@ -1,0 +1,50 @@
+.subscribe__text,
+.subscribe,
+.form {
+    @include flex-pos(normal, center);
+}
+
+.subscribe {
+    margin-top: 30px;
+    padding: 10px 15px;
+
+    @include border(border-top, 1px, dashed, $smokie, 0);
+    @include border(border-bottom, 1px, dashed, $smokie, 0);
+
+    &__text {
+        position: relative;
+        padding-left: 50px;
+        font-style: italic;
+
+        &::before {
+            content: url("../assets/icons/mail-icon.svg");
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+
+.form {
+    &__input,
+    &__btn {
+        font-size: 10px;
+        line-height: 10px;
+        @include border(border, 1px, solid, $smokie, 0);
+    }
+
+    &__input {
+        margin-right: 20px;
+        padding: 6px;
+        color: $smokie;
+    }
+
+    &__btn {
+        padding: 8px 15px;
+        background-image: $smokie-gradient;
+        border-radius: 2px;
+
+        &:hover {
+            background-image: $smokie-gradient-active;
+        }
+    }
+}

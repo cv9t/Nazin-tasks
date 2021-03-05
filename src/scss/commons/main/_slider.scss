@@ -1,0 +1,33 @@
+.slider {
+
+    &__img {
+        width: 100%;
+    }
+
+    &__inner {
+        position: relative;
+    }
+
+    &__text-container {
+        bottom: 15%;
+        position: absolute;
+    }
+
+    &__title {
+        display: inline-flex;
+        background-color: $white;
+
+        @include font($font-family-arial, $font-weight-normal, 22px, italic, $dark, 22px);
+    }
+
+    &__subtitle {
+        background-color: $dark;
+        font-style: italic;
+        color: $white;
+    }
+
+    &__title,
+    &__subtitle {
+        padding: 15px 30px;
+    }
+}

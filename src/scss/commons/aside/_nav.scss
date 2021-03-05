@@ -1,0 +1,23 @@
+.nav {
+
+    &__link {
+        position: relative;
+        padding-left: 40px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+
+        @include flex-pos(flex-start, center);
+    }
+
+    &__icon {
+        position: absolute;
+    }
+}
+
+@each $order in (1, 2, 3, 4, 5) {
+    .nav__link--#{$order}::before {
+        content: url("../assets/icons/nav-icon-#{$order}.svg");
+        position: absolute;
+        left: 0;
+    }
+}

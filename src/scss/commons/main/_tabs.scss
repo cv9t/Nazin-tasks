@@ -1,0 +1,34 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__btn {
+        width: 25%;
+        padding: 25px;
+        background-color: $light;
+        transition: .2s;
+
+        &:hover {
+            background-color: $light-active;
+        }
+
+        &:not(:nth-child(4n)) {
+            @include border(border-right, 1px, solid, $white, 0);
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+
+    &__subtitle {
+        font-size: 10px;
+        font-style: italic;
+    }
+    
+    &__title,
+    &__subtitle {
+        line-height: 18px;
+        text-align: start;
+    }
+}

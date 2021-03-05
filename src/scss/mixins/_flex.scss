@@ -1,0 +1,10 @@
+@mixin flex-dir($fd) {
+    display: flex;
+    flex-direction: $fd;
+}
+
+@mixin flex-pos($jp, $ap) {
+    display: flex;
+    justify-content: $jp;
+    align-items: $ap;
+}
