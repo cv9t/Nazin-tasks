@@ -8,3 +8,10 @@
         @include border(border-top, 2px, solid, $smokie, 0);
     }
 }
+
+// Media
+@include _480 {
+    .footer {
+        padding: 0 20px;
+    }
+}

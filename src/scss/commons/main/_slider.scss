@@ -14,6 +14,7 @@
     }
 
     &__text-container {
+        width: 100%;
         bottom: 15%;
         position: absolute;
 
@@ -46,6 +47,52 @@
     &__title span,
     &__subtitle span{
         font-style: italic;
-        padding: 15px 30px;
+        padding: 15px 25px;
+    }
+}
+
+
+// Media
+@include _768 {
+    .slider {
+
+        &__text-container {
+            bottom: 0;
+        }
+
+        &__title span,
+        &__subtitle span{
+            width: 100%;
+        }
+
+        &__title span {
+            padding-left: 10px;
+            opacity: 0.6;
+        }
+    }
+}
+
+@include _480 {
+
+    .slider {
+
+        &__text-container {
+            bottom: -10%;
+        }
+
+        &__title span,
+        &__subtitle span {
+            padding: 10px 0;
+            padding-left: 5px;
+        }
+
+        &__img {
+            overflow: hidden;
+
+            & img {
+                object-fit: contain;
+                min-width: 480px;
+            }
+        }
     }
 }

@@ -1,12 +1,12 @@
 .cards {
     margin-top: 30px;
 
-    &__wrapper {
+    &__inner {
         flex-wrap: wrap;
     }
 }
 
-.cards__wrapper,
+.cards__inner,
 .card__footer {
     display: flex;
 }
@@ -70,6 +70,47 @@
             &::after {
                 content: "...";
             }
+        }
+    }
+}
+
+
+// Media
+@include _768 {
+    .card {
+        position: relative;
+        width: 47%;
+        margin-right: 6%;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        &:nth-child(n+2) {
+            margin-top: 20px;
+        }
+
+        &:nth-child(2) {
+            margin-top: 0;
+        }
+
+        &__footer {
+            margin-top: auto;
+        }
+    }
+}
+
+@include _480 {
+    .cards {
+        padding: 0 60px;
+    }
+
+    .card {
+        margin: 0;
+        width: 100%;
+
+        &:nth-child(n+2) {
+            margin-top: 40px;
         }
     }
 }

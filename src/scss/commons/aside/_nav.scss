@@ -1,4 +1,6 @@
 .nav {
+    flex-wrap: wrap;
+
     @include flex-dir(column);
 
     &__link {
@@ -33,14 +35,55 @@
             @include flex-dir(column);
             @include flex-pos(center, center);
 
-            &:first-child {
-                padding: 0;
-            }
-
             &::before {
                 position: relative;
                 margin-bottom: 10px;
             }
+        }
+    }
+}
+
+@include _768 {
+    .nav {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 20px;
+
+        @include flex-pos(space-between, center);
+
+        &__link {
+            padding: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@include _480 {
+    .container {
+        padding: 0;
+    }
+
+    .aside {
+        margin: 0;
+        padding: 30px 0;
+
+        &__inner {
+            flex-direction: column-reverse;
+        }
+
+        &__logo {
+            margin-top: 30px;
+        }
+    }
+
+    .nav {
+        padding: 0 20px;
+
+        &__link {
+            padding: 0;
         }
     }
 }

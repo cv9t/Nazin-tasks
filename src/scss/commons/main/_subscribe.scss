@@ -54,3 +54,35 @@
         }
     }
 }
+
+
+// Media
+@include _768 {
+    .subscribe { 
+        margin-top: 50px;
+    }
+}
+
+@include _480 {
+    .subscribe {
+        margin-top: 60px;
+        padding-bottom: 30px;
+        flex-direction: column;
+
+        &__text {
+            align-items: flex-start;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .form {
+        width: 100%;
+        margin: 0;
+
+        &__input {
+            margin: 0;
+            flex: 0.90;
+        }
+    }
+}
