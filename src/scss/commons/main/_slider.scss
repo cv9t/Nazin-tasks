@@ -11,23 +11,36 @@
     &__text-container {
         bottom: 15%;
         position: absolute;
+
+        @include flex-dir(column);
     }
 
     &__title {
-        display: inline-flex;
-        background-color: $white;
 
         @include font($font-family-arial, $font-weight-normal, 22px, italic, $dark, 22px);
+
+        & span {
+            background-color: $white;
+        }
     }
 
     &__subtitle {
-        background-color: $dark;
-        font-style: italic;
+        
         color: $white;
+
+        & span {
+            background-color: $dark;
+        }
     }
 
     &__title,
     &__subtitle {
+        display: inline-flex;
+    }
+
+    &__title span,
+    &__subtitle span{
+        font-style: italic;
         padding: 15px 30px;
     }
 }
