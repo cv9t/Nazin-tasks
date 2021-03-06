@@ -2,6 +2,11 @@
 
     &__img {
         width: 100%;
+
+        & img {
+            object-fit: cover;
+            max-height: 450px;
+        }
     }
 
     &__inner {

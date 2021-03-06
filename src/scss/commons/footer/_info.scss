@@ -5,12 +5,14 @@
     }
 
     &__list {
-        display: flex;
         margin-bottom: 5px;
 
+        &,
         &-item {
             display: flex;
+        }
 
+        &-item {
             &:not(:last-child)::after {
                 content: "";
                 display: block;

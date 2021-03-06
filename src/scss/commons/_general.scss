@@ -29,3 +29,16 @@
 .copyright {
     @include font($font-family-arial, $font-weight-normal, 12px, normal, $smokie, 12px);
 }
+
+
+// Media
+@include _992 {
+    .aside-n-main {
+        padding: 0;
+
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

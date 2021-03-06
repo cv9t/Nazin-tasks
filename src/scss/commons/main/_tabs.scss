@@ -5,8 +5,9 @@
     &__btn {
         width: 25%;
         padding: 25px;
+        text-align: start;
         background-color: $light;
-        transition: .2s;
+        transition: background-color .2s linear;
 
         &:hover {
             background-color: $light-active;
@@ -17,6 +18,12 @@
         }
     }
 
+    &__title,
+    &__subtitle {
+        display: inline-block;
+        line-height: 18px;
+    }
+
     &__title {
         font-size: 18px;
     }
@@ -25,10 +32,32 @@
         font-size: 10px;
         font-style: italic;
     }
-    
-    &__title,
-    &__subtitle {
-        line-height: 18px;
-        text-align: start;
+}
+
+
+// Media
+@include _1176 {
+    .tabs {
+
+        &__btn {
+            padding: 10px 0;
+            text-align: center;
+
+            &:not(:nth-child(4n)) {
+                @include border(border-right, 1px, solid, $tabs-border, 0);
+            }
+
+            &:not(:nth-child(4n+1)) {
+                @include border(border-left, 1px, solid, $white, 0);
+            }
+        }
+
+        &__title {
+            font-size: 14px;
+        }
+
+        &__subtitle {
+            display: none;
+        }
     }
 }

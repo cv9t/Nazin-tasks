@@ -61,3 +61,11 @@
         position: absolute;
     }
 }
+
+
+// Media
+@include _992 {
+    .socials {
+        display: none;
+    }
+}

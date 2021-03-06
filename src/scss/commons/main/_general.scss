@@ -1,3 +1,11 @@
 .main {
     width: 83%;
 }
+
+
+// Media
+@include _992 {
+    .main {
+        width: 100%;
+    }
+}

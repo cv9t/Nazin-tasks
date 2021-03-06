@@ -1,16 +1,14 @@
 .nav {
+    @include flex-dir(column);
 
     &__link {
         position: relative;
         padding-left: 40px;
         margin-top: 10px;
         margin-bottom: 50px;
+        font-style: italic;
 
         @include flex-pos(flex-start, center);
-    }
-
-    &__icon {
-        position: absolute;
     }
 }
 
@@ -19,5 +17,30 @@
         content: url("../assets/icons/nav-icon-#{$order}.svg");
         position: absolute;
         left: 0;
+    }
+}
+
+
+// Media 
+@include _992 {
+    .nav {
+        flex-direction: row;
+        padding-right: 30px;
+
+        &__link {
+            margin: 0;
+
+            @include flex-dir(column);
+            @include flex-pos(center, center);
+
+            &:first-child {
+                padding: 0;
+            }
+
+            &::before {
+                position: relative;
+                margin-bottom: 10px;
+            }
+        }
     }
 }
