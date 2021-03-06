@@ -1,6 +1,7 @@
-.subscribe__text,
+.form,
 .subscribe,
-.form {
+.subscribe__text
+ {
     @include flex-pos(normal, center);
 }
 
@@ -15,6 +16,7 @@
         position: relative;
         padding-left: 50px;
         font-style: italic;
+        line-height: 16px;
 
         &::before {
             content: url("../assets/icons/mail-icon.svg");
@@ -36,7 +38,6 @@
     &__input {
         margin-right: 20px;
         padding: 6px;
-        color: $smokie;
     }
 
     &__btn {

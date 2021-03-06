@@ -14,7 +14,7 @@
             &:not(:last-child)::after {
                 content: "";
                 display: block;
-                margin: 0 4px;
+                margin: 0 5px;
 
                 @include border(border-right, 1.5px, solid, $smokie, 0);
             }
@@ -22,9 +22,15 @@
     }
 
     &__link{
+        font-size: 12px;
+        line-height: 12px;
 
         &:hover{
             text-decoration: underline;
+        }
+
+        &:last-child .footer__icon {
+            margin-right: 0;
         }
     }
 }

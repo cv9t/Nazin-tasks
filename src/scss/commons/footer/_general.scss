@@ -1,7 +1,10 @@
 .footer {
     margin-top: 50px;
-    padding: 30px 10px;
+    
+    &__inner {
+        padding: 30px 10px;
 
-    @include flex-pos(space-between, center);
-    @include border(border-top, 2px, solid, $smokie, 0);
+        @include flex-pos(space-between, center);
+        @include border(border-top, 2px, solid, $smokie, 0);
+    }
 }
