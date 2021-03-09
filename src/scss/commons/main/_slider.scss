@@ -73,7 +73,6 @@
 }
 
 @include _480 {
-
     .slider {
 
         &__text-container {
@@ -90,7 +89,6 @@
             overflow: hidden;
 
             & img {
-                object-fit: contain;
                 min-width: 480px;
             }
         }
